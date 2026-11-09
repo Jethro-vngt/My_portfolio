@@ -1,5 +1,6 @@
 import portraitImage from "../grad_pic-removebg-preview.png";
 import loginScreenImage from "../Login page.png";
+import hotelManagementImage from "../Hotel_Management_System.png";
 import resumePdf from "../Arrogante Resume.pdf";
 
 const facts = [
@@ -12,31 +13,42 @@ const projects = [
   {
     image: loginScreenImage,
     alt: "Port-Jeep mobile login screen",
-    category: "01 / 2026 CAPSTONE",
-    name: "Port-Jeep",
-    description:
-      "Built a mobile front-end using custom layouts and dynamic adapters for responsive cooperative transport staff workflows.",
-    year: "2026",
+    category: "01 / CAPSTONE PROJECT",
+    name: "Port-Jeep Management System",
+    role: "Front-End Developer & Backend Support",
+    dateRange: "Date range",
+    highlights: [
+      "Developed web, mobile, and IoT platform features for SMMPC to digitize fleet remittance collection and driver scheduling.",
+      "Configured ESP32 microcontrollers with GPS and accelerometer modules for real-time location tracking and automated SMS emergency alerts.",
+      "Engineered front-end user workflows and provided backend integration support across mobile and web interfaces.",
+    ],
+  },
+  {
+    image: hotelManagementImage,
+    alt: "Hotel management system reservation and room inventory interface",
+    category: "02 / TEAM PROJECT",
+    name: "Hotel Management System",
+    role: "Front-End Developer, Backend Support & QA Specialist",
+    dateRange: "Date range",
+    highlights: [
+      "Built C# desktop interfaces for guest bookings, room inventory, and admin management.",
+      "Managed backend MySQL integration via phpMyAdmin for guest records, hourly pricing, and staff data.",
+      "Conducted QA testing on checkout flows, reservations, and UI navigation to resolve bugs.",
+    ],
   },
   {
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=82",
-    alt: "Computer technician working with IT hardware",
-    category: "02 / HARDWARE",
-    name: "IoT Tracking Unit",
-    description:
-      "Designed and built an ESP32 GPS and GSM tracking unit for real-time location monitoring and SMS alerts.",
-    year: "2026",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=82",
-    alt: "Team collaborating on software QA and testing",
-    category: "03 / QA TESTING",
-    name: "Mobile QA Verification",
-    description:
-      "Executed end-to-end test cases to identify UI issues, improve stability, and optimize real-world usability.",
-    year: "2026",
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=82",
+    alt: "Library shelves representing the SMNHS Library Management System",
+    category: "03 / TEAM PROJECT",
+    name: "SMNHS Library Management System",
+    role: "Front-End Developer & QA Specialist",
+    dateRange: "Date range",
+    highlights: [
+      "Developed React and TypeScript front-end portals with custom views for students, teachers, and librarians.",
+      "Executed QA testing across catalog management, borrowing, reservations, and user accounts.",
+      "Verified UI flows for automated email alerts and Ollama/Gemini AI chatbot features.",
+    ],
   },
 ];
 
@@ -159,12 +171,12 @@ function App() {
             <div>
               <p className="section-kicker">01 / Project experience</p>
               <h2 id="work-title">
-                Port-Jeep <em>capstone.</em>
+                Selected <em>projects.</em>
               </h2>
             </div>
             <p className="section-note">
-              Integrated web and mobile remittance, scheduling, and GPS tracking
-              system for cooperative operations.
+              Front-end development, backend integration, IoT, and quality
+              assurance across academic team projects.
             </p>
           </div>
           <div className="projects">
@@ -179,14 +191,57 @@ function App() {
                   <span className="project-no">{project.category}</span>
                 </div>
                 <div className="project-info">
-                  <div>
+                  <div className="project-copy">
                     <h3>{project.name}</h3>
-                    <p>{project.description}</p>
+                    <ul>
+                      <li className="project-role">{project.role}</li>
+                      {project.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
+                    <div className="project-meta">
+                      <span>{project.dateRange}</span>
+                      <span>{project.category.replace(/^\d+\s*\/\s*/, "")}</span>
+                    </div>
                   </div>
-                  <span className="project-year">{project.year}</span>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="app-download" id="download" aria-labelledby="download-title">
+          <div className="app-download-copy">
+            <p className="app-download-eyebrow">AVAILABLE NOW</p>
+            <h2 id="download-title">
+              Port-Jeep <span>application</span>
+            </h2>
+            <p>
+              Get the Port-Jeep app for fleet remittance, driver scheduling,
+              and emergency location tracking.
+            </p>
+            <a
+              className="app-download-button"
+              href="https://apkpure.com/portjeep/com.example.portjeep"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="app-download-icon" aria-hidden="true">↓</span>
+              <span>
+                <strong>Download</strong>
+                <small>Port-Jeep application</small>
+              </span>
+              <span className="app-download-arrow" aria-hidden="true">↗</span>
+            </a>
+            <small className="app-download-source">Download hosted on APKPure</small>
+          </div>
+          <div className="app-download-visual" aria-hidden="true">
+            <span className="app-download-orbit app-download-orbit-one" />
+            <span className="app-download-orbit app-download-orbit-two" />
+            <div className="app-download-phone">
+              <img src={loginScreenImage} alt="" loading="lazy" />
+            </div>
+            <span className="app-download-sticker">PORTJEEP<br />ON THE GO</span>
           </div>
         </section>
 
