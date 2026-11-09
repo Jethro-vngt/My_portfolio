@@ -16,7 +16,7 @@ const projects = [
     category: "01 / CAPSTONE PROJECT",
     name: "Port-Jeep Management System",
     role: "Front-End Developer & Backend Support",
-    dateRange: "Date range",
+    dateRange: "Sept 28, 2026",
     highlights: [
       "Developed web, mobile, and IoT platform features for SMMPC to digitize fleet remittance collection and driver scheduling.",
       "Configured ESP32 microcontrollers with GPS and accelerometer modules for real-time location tracking and automated SMS emergency alerts.",
@@ -29,7 +29,7 @@ const projects = [
     category: "02 / TEAM PROJECT",
     name: "Hotel Management System",
     role: "Front-End Developer, Backend Support & QA Specialist",
-    dateRange: "Date range",
+    dateRange: "2023 - 2024",
     highlights: [
       "Built C# desktop interfaces for guest bookings, room inventory, and admin management.",
       "Managed backend MySQL integration via phpMyAdmin for guest records, hourly pricing, and staff data.",
@@ -43,7 +43,7 @@ const projects = [
     category: "03 / TEAM PROJECT",
     name: "SMNHS Library Management System",
     role: "Front-End Developer & QA Specialist",
-    dateRange: "Date range",
+    dateRange: "2026",
     highlights: [
       "Developed React and TypeScript front-end portals with custom views for students, teachers, and librarians.",
       "Executed QA testing across catalog management, borrowing, reservations, and user accounts.",
